@@ -2,6 +2,7 @@
 import pygame
 import random
 
+
 # initialize the pygame
 pygame.init()
 
@@ -25,26 +26,26 @@ display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption('Feed the Dragon')
 
 # set up the background
-background = pygame.image.load('data/dragon_night.jpg')
+background = pygame.image.load('Feed_the_dragon/data/dragon_night.jpg')
 background_rect = background.get_rect()
 background_rect.topleft = (0, 0)
 
 # set up the actors
-coin = pygame.image.load('data/coin.png')
+coin = pygame.image.load('Feed_the_dragon/data/coin.png')
 coin_rect = coin.get_rect()
 coin_rect.left = BUFFER_DISTANCE
 coin_rect.top = random.randint(64, WINDOW_HEIGHT-64)
 
-dragon = pygame.image.load('data/dragon.png')
+dragon = pygame.image.load('Feed_the_dragon/data/dragon.png')
 dragon_rect = dragon.get_rect()
 dragon_rect.centery = WINDOW_HEIGHT//2
 dragon_rect.right = WINDOW_WIDTH - 10
 
 # set up the sound and music
-pickup = pygame.mixer.Sound('data/pickup.wav')
-loss = pygame.mixer.Sound('data/loss.wav')
+pickup = pygame.mixer.Sound('Feed_the_dragon/data/pickup.wav')
+loss = pygame.mixer.Sound('Feed_the_dragon/data/loss.wav')
 
-pygame.mixer.music.load('data/background_music.mp3')
+pygame.mixer.music.load('Feed_the_dragon/data/background_music.mp3')
 pygame.mixer.music.set_volume(0.4)
 pygame.mixer.music.play(-1) # -1 infinite loop
 
@@ -55,7 +56,7 @@ current_coin_velocity = COIN_VELOCITY
 game_status = 1
 
 # font
-game_font = pygame.font.Font('data/AttackGraffiti.ttf', 32) #fontname, font-size
+game_font = pygame.font.Font('Feed_the_dragon/data/AttackGraffiti.ttf', 32) # fontname, font-size
 
 # texts
 lives = game_font.render('Lives: ' + str(current_player_lives), True, GREEN)
@@ -68,7 +69,7 @@ title_rect = title.get_rect()
 title_rect.top = 10
 title_rect.centerx = WINDOW_WIDTH // 2
 
-score =  game_font.render('Score: ' + str(current_player_score), True, GREEN)
+score = game_font.render('Score: ' + str(current_player_score), True, GREEN)
 score_rect = score.get_rect()
 score_rect.top = 10
 score_rect.right = WINDOW_WIDTH - 50

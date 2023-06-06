@@ -1,6 +1,6 @@
-# Feed the dragon_game
- As the name suggests a Pygame themed on feeding a dragon.
- The dist folder contains executable file.
+# Pygames
+ As the name suggests a repo of 2-D games made with Pygame.
+
 # Feed The Dragon
 As the name suggests a Pygame themed on feeding a dragon. In this game coin is moving horizontally and your dragon is present on right side you have to move your dragon with up and down arrow keys and feed him with coins.
 
